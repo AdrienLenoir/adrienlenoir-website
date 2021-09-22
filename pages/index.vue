@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <HeroSection />
+  </div>
 </template>
 
 <script>
