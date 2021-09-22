@@ -8,6 +8,10 @@
       <SocialIcon icon='fas fa-envelope' />
     </SocialIconWrapper>
     <br><br><br>
+    <Arrow direction="top" />
+    <Arrow direction="right" />
+    <Arrow direction="bottom" />
+    <Arrow direction="left" />
   </div>
 </template>
 
