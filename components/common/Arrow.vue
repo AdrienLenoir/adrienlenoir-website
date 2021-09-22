@@ -15,6 +15,10 @@ export default {
     direction: {
       type: String,
       required: true
+    },
+    size: {
+      type: String,
+      default: 'default'
     }
   },
   data () {
@@ -31,6 +35,10 @@ export default {
       this.arrowClass.push('arrow-light')
     }
 
+    if (this.size === 'small') {
+      this.arrowClass.push('arrow-size-small')
+    }
+
     this.arrowClass.push(`arrow-${this.direction}`)
   }
 }
@@ -39,10 +47,13 @@ export default {
 <style lang='scss' scoped>
 .arrow {
   display: block;
-  margin: auto;
 
   i {
     font-size: 28px;
+  }
+
+  &-size-small i {
+    font-size: 20px;
   }
 
   &-light i {

@@ -46,9 +46,9 @@ body {
   font-weight: 200;
 }
 
-body ::selection {
+body::selection {
   background: var(--c-grey);
-  color: var(--c-white);
+  color: var(--c-primary);
 }
 
 a {

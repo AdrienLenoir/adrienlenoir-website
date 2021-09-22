@@ -12,6 +12,10 @@
     <Arrow direction="right" />
     <Arrow direction="bottom" />
     <Arrow direction="left" />
+    <br><br><br>
+    <ArrowLink target="" arrowdirection="bottom">
+      Mes réalisations
+    </ArrowLink>
   </div>
 </template>
 
