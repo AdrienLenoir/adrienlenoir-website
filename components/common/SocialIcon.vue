@@ -53,4 +53,21 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .social-icon {
+    height: 35px;
+    width: 35px;
+    margin: 15px;
+
+    &:after {
+      height: 45px;
+      width: 45px;
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
+}
 </style>
