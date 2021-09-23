@@ -1,11 +1,14 @@
 <template>
   <div class='main-container'>
-    <header class="hero-header">
+    <header class="hero-header" data-scroll data-scroll-speed="1">
       <div class="me-text">
-        <h1><span>Adrien</span><span>Lenoir</span></h1>
+        <h1>
+          <span data-scroll data-scroll-direction='horizontal' data-scroll-speed="6">Adrien</span>
+          <span data-scroll data-scroll-direction='horizontal' data-scroll-speed="-6">Lenoir</span>
+        </h1>
         <h2>Développeur web</h2>
       </div>
-      <div class="socials">
+      <div data-scroll data-scroll-speed="-2" class="socials">
         <SocialIconWrapper>
           <SocialIcon icon='fab fa-behance' />
           <SocialIcon icon='fab fa-linkedin-in' />
@@ -13,12 +16,15 @@
           <SocialIcon icon='fas fa-envelope' />
         </SocialIconWrapper>
       </div>
-      <div class='goto-bottom'>
-        <a href='#me'>
-          <Arrow direction='bottom' />
-        </a>
-      </div>
+
+      <div data-scroll-sticky class='goto-bottom'>
+      <a href='#me' data-scroll-to>
+        <Arrow direction='bottom' />
+      </a>
+    </div>
     </header>
+
+
   </div>
 </template>
 
@@ -75,16 +81,7 @@ export default {
     margin-top: 100px;
   }
 
-  .goto-bottom {
-    position: absolute;
-    bottom: 40px;
-    right: 0;
 
-    a {
-      display: block;
-      animation: 1s linear 2s infinite alternate moveArrow;
-    }
-  }
 
   @keyframes moveArrow {
     from {
@@ -95,6 +92,17 @@ export default {
     }
   }
 }
+
+.goto-bottom {
+   position: absolute;
+   bottom: 40px;
+   right: 0;
+
+   a {
+     display: block;
+     animation: 1s linear 2s infinite alternate moveArrow;
+   }
+ }
 
 @media screen and (max-width: 848px) {
   .hero-header {

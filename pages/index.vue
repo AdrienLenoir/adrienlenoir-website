@@ -1,6 +1,12 @@
 <template>
-  <div>
+  <div id='js-scroll' data-scroll-container>
     <HeroSection />
+    <MeSection />
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
   </div>
 </template>
 
@@ -18,6 +24,13 @@ export default {
         { hid: 'description', name: 'description', content: '' }
       ]
     }
+  },
+  mounted() {
+    this.lmS = new this.LocomotiveScroll({
+      el: document.querySelector("#js-scroll"),
+      smooth: true,
+      reloadOnContextChange: true,
+    });
   },
   methods: {}
 }
