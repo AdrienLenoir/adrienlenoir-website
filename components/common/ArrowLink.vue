@@ -40,6 +40,7 @@ export default {
 <style lang="scss" scoped>
 .arrow-link {
   display: inline-block;
+  text-transform: uppercase;
 
   &-wrapper {
     display: flex;
