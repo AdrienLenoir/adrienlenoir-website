@@ -54,49 +54,6 @@
         </div>
       </div>
     </div>
-
-    <!--<div class='main-container' data-scroll data-scroll-direction='vertical' data-scroll-offset='50,50' data-scroll-speed="2">
-      <div class='me-header'>
-        <div class='me-header-card'>
-          <MeCard />
-        </div>
-        <div class='nav-title'>
-          <h3>{{ subSections.filter(section => section.id === activeSubSection)[0].name }}</h3>
-        </div>
-      </div>
-      <div class='me-content'>
-        <div class='me-content-navigation'>
-          <MeNavigation :active-sub-section='activeSubSection' :sub-sections='subSections' />
-        </div>
-        <div class='me-content-display'>
-            <div class='me-content-display-item presentation'>
-              <h4>Présentation</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-            </div>
-            <div class='me-content-display-item experience'>
-              <h4>Expériences</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-            </div>
-            <div class='me-content-display-item school'>
-              <h4>Études & Formations</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-            </div>
-            <div class='me-content-display-item competence'>
-              <h4>Compétences</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At ultrices mi tempus imperdiet nulla. Habitant morbi tristique senectus et. Nullam vehicula ipsum a arcu cursus vitae congue. Varius morbi enim nunc faucibus a. Vitae suscipit tellus mauris a diam. Euismod nisi porta lorem mollis aliquam ut porttitor. Libero volutpat sed cras ornare arcu dui. Lorem sed risus ultricies tristique nulla aliquet enim. Quisque sagittis purus sit amet volutpat consequat. Convallis aenean et tortor at risus. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p>
-            </div>
-        </div>
-      </div>
-    </div>-->
   </section>
 </template>
 
