@@ -1,5 +1,5 @@
 <template>
-  <a :href="target" class="arrow-link" :class="dark ? 'arrow-link-dark' : 'arrow-link-light'">
+  <a :href="target" class="arrow-link" :class="dark ? 'arrow-link-dark' : 'arrow-link-light'" data-scroll-to>
     <span class='arrow-link-wrapper'>
       <Arrow :dark="dark" :direction="arrowdirection" size="small" />
       <slot />

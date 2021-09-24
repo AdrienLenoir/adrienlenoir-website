@@ -3,6 +3,8 @@
 
 /* RESET CSS
  * --------------------------------------- */
+
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
   padding: 0;
@@ -38,7 +40,7 @@ i {
  * --------------------------------------- */
 
 body {
-  overflow-x: hidden !important;
+  overflow: scroll !important;
   background-color: var(--c-primary);
   color: var(--c-white);
   font-size: 18px;
