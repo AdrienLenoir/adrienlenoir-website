@@ -43,7 +43,12 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ["~/components/common/", "~/components/sections/"],
+  components: [
+    "~/components/common/",
+    "~/components/sections/",
+    "~/components/sections/me",
+    "~/components/sections/portfolio",
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

@@ -40,7 +40,7 @@ i {
  * --------------------------------------- */
 
 body {
-  overflow-x: hidden !important;
+  overflow: scroll !important;
   background-color: var(--c-primary);
   color: var(--c-white);
   font-size: 18px;

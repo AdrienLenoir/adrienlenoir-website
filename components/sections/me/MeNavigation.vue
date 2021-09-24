@@ -3,14 +3,13 @@
 
     <a v-for='section in subSections'
        :key='section.id'
-       href='#'
-       class='me-navigation-item'
-       :class="activeSubSection === section.id ? 'me-navigation-item-active' : ''"
-       @click.prevent="$parent.setActiveSubSection(section.id)">
+       :href="`#me-subsection-${section.id}`"
+       data-scroll-to
+       class='me-navigation-item'>
       {{ section.name }}
     </a>
 
-    <ArrowLink target='real' arrowdirection='bottom' dark>
+    <ArrowLink target='#portfolio' arrowdirection='bottom' dark>
       Mes réalisations
     </ArrowLink>
   </nav>
