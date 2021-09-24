@@ -1,8 +1,13 @@
 <template>
   <a :href="target" class="arrow-link" :class="dark ? 'arrow-link-dark' : 'arrow-link-light'" data-scroll-to>
     <span class='arrow-link-wrapper'>
-      <Arrow :dark="dark" :direction="arrowdirection" size="small" />
+      <template v-if="arrowposition === 'left'">
+        <Arrow :dark="dark" :direction="arrowdirection" size="small" />
+      </template>
       <slot />
+      <template v-if="arrowposition !== 'left'">
+        <Arrow :dark="dark" :direction="arrowdirection" size="small" />
+      </template>
     </span>
   </a>
 </template>
@@ -11,6 +16,11 @@
 export default {
   name: 'ArrowLink',
   props: {
+    arrowposition: {
+      type: String,
+      required: false,
+      default: 'left'
+    },
     target: {
       type: String,
       required: true
@@ -30,6 +40,7 @@ export default {
 <style lang="scss" scoped>
 .arrow-link {
   display: inline-block;
+  text-transform: uppercase;
 
   &-wrapper {
     display: flex;

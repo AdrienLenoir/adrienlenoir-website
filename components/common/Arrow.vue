@@ -49,14 +49,14 @@ export default {
   display: block;
 
   i {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   &-size-small i {
     font-size: 20px;
   }
 
-  &-light i {
+  &-light {
     color: var(--c-white);
   }
 
