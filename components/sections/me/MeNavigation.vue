@@ -22,10 +22,6 @@ export default {
     subSections: {
       type: Array,
       required: true
-    },
-    activeSubSection: {
-      type: Number,
-      required: true
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <a href="" class="social-icon">
+  <a :href="target" :target="target && target.includes('https') ? '_blank' : ''" class="social-icon" :class="small ? 'social-icon-small' : ''">
     <i :class="icon" />
   </a>
 </template>
@@ -9,6 +9,15 @@ export default {
   name: 'SocialIcon',
   props: {
     icon: {
+      type: String,
+      required: true
+    },
+    small: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    target: {
       type: String,
       required: true
     }
@@ -50,6 +59,20 @@ export default {
 
     &:after {
       transform: scale(1.15);
+    }
+  }
+
+  &-small {
+    height: 40px;
+    width: 40px;
+
+    i {
+      font-size: 18px;
+    }
+
+    &:after {
+      height: 55px;
+      width: 55px;
     }
   }
 }

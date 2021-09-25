@@ -1,5 +1,5 @@
 <template>
-  <a :href="target" class="arrow-link" :class="dark ? 'arrow-link-dark' : 'arrow-link-light'" data-scroll-to>
+  <a :href="target" class="arrow-link" :class="dark ? 'arrow-link-dark' : 'arrow-link-light'" :data-scroll-to="target && target.toString().includes('#')">
     <span class='arrow-link-wrapper'>
       <template v-if="arrowposition === 'left'">
         <Arrow :dark="dark" :direction="arrowdirection" size="small" />
