@@ -3,17 +3,18 @@
     <HeroSection />
     <MeSection />
     <PortfolioSection />
-    <h1 style='color: white;text-align: center;font-size: 50px;padding: 45vh 0;'>COUCOU</h1>
+    <FooterSection />
   </div>
 </template>
 
 <script>
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import FooterSection from '../components/sections/FooterSection'
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
-  components: {},
+  components: { FooterSection },
   data() {
     return {}
   },

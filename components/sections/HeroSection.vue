@@ -10,10 +10,9 @@
       </div>
       <div data-scroll data-scroll-speed="-2" class="socials">
         <SocialIconWrapper>
-          <SocialIcon icon='fab fa-behance' />
-          <SocialIcon icon='fab fa-linkedin-in' />
-          <SocialIcon icon='fab fa-github' />
-          <SocialIcon icon='fas fa-envelope' />
+          <SocialIcon icon='fab fa-linkedin-in' target='https://www.linkedin.com/in/adrien-lenoir-webdev' />
+          <SocialIcon icon='fab fa-github' target='https://github.com/AdrienLenoir' />
+          <SocialIcon icon='fas fa-envelope' target='mailto:lenoiradrien1@gmail.com' />
         </SocialIconWrapper>
       </div>
 

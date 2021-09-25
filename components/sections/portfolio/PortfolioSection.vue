@@ -51,9 +51,10 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const portfolio = [
   { id: 0, name: "Dervoo.com", link: "https://dervoo.com/", image: "/dervoo.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
-  { id: 1, name: "Dervoo.com", link: "https://dervoo.com/", image: "/dervoo.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
+  { id: 1, name: "Business.dervoo.com", link: "https://businessdervoo.com/", image: "/dervoo-business.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
   { id: 2, name: "Dervoo.com", link: "https://dervoo.com/", image: "/dervoo.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
-  { id: 3, name: "Dervoo.com", link: "https://dervoo.com/", image: "/dervoo.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
+  { id: 3, name: "Business.dervoo.com", link: "https://businessdervoo.com/", image: "/dervoo-business.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
+
 ]
 
 export default {
@@ -120,12 +121,13 @@ export default {
 .portfolio-main-section {
   .p-section-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
   &-text {
     flex: .4;
+    max-width: 500px;
     margin-right: 30px;
     transform: translateY(20%);
     transition: all 1.5s ease-in-out;
