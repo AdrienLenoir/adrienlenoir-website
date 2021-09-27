@@ -17,15 +17,15 @@
               <h3 data-scroll data-scroll-speed='-1.5' data-scroll-direction='horizontal'>Présentation</h3>
             </div>
             <div class='presentation-content'>
-              <p>Hello! Je m'appel Adrien, j'ai actuellement {{ getAge() }} ans, je réside en Belgique et je suis passionné par l'informatique en général, depuis mon enfance.</p>
+              <p>Hello! Je m'appel Adrien, j'ai actuellement {{ getAge() }} ans, je réside en Belgique et je suis passionné par l'informatique en général.</p>
               <br>
               <p>Fort de plus de 7 ans d'expérience dans le développement informatique,</p>
               <p>
-                j'ai fait mes débuts sur les jeux vidéo en créant des serveurs sur le jeu "Minecraft", réalisant des plugins développer en Java pour mon propre éppanouhisement ou pour des amis.
+                j'ai fait mes débuts sur les jeux vidéo en créant des serveurs sur le jeu "Minecraft", réalisant des plugins développés en Java pour mon propre épanouissement ou pour des amis.
               </p>
               <br>
               <p>
-                Par la suite, je me suis mis à découvrir le monde du développement web, qui est devenu une passion pour moi depuis maintenant plus de 5 ans.
+                Par la suite, je me suis intéressé au développement Web, qui est aujourd'hui et depuis 5 ans, une réelle passion pour moi.
               </p>
             </div>
           </div>
@@ -51,8 +51,8 @@
                   <i class="fas fa-book"></i>
                 </div>
                 <div class='time-item-content'>
-                  <h4 class='time-item-content-title'>Réalisation de site</h4>
-                  <p>Réalisation de site web pour mon propre usage ou pour des amis & connaissances.</p>
+                  <h4 class='time-item-content-title'>Réalisation de sites web</h4>
+                  <p>Réalisation de sites web pour mon propre usage ou pour des amis & connaissances.</p>
                   <ArrowLink target='#portfolio' arrowdirection='bottom' arrowposition='right' dark>Voir mes réalisations</ArrowLink>
                 </div>
               </div>
@@ -72,7 +72,7 @@
                 <div class='time-item-content'>
                   <h4 class='time-item-content-title'>Becode</h4>
                   <p class='time-item-content-time'><i class="far fa-clock"></i> 25/05/2021 - Maintenant</p>
-                  <p>Formatation développement web à Becode.</p>
+                  <p>Formatation de type développement web à Becode.</p>
                 </div>
               </div>
               <div class='time-item'>
@@ -82,7 +82,7 @@
                 <div class='time-item-content'>
                   <h4 class='time-item-content-title'>Bootcamp en développement</h4>
                   <p class='time-item-content-time'><i class="far fa-clock"></i> 07/12/2020 - 19/01/2021</p>
-                  <p>Formation de "Bootcamp" en développement à Technofutur TIC.</p>
+                  <p>Formation de type Bootcamp en développement à Technofutur TIC.</p>
                 </div>
               </div>
               <div class='time-item'>
@@ -92,7 +92,7 @@
                 <div class='time-item-content'>
                   <h4 class='time-item-content-title'>Tremplin OLL</h4>
                   <p class='time-item-content-time'><i class="far fa-clock"></i> 24/08/2020 - 11/09/2021</p>
-                  <p>Formation de "tremplin" à Technofutur TIC.</p>
+                  <p>Formation de type tremplin à Technofutur TIC.</p>
                 </div>
               </div>
               <div class='time-item'>
@@ -114,7 +114,8 @@
               <h3 data-scroll data-scroll-speed='-1.5' data-scroll-direction='horizontal'>Compétences</h3>
             </div>
             <div class='skill-content'>
-              <p>En réalisant des sites web pour moi-même ou pour des amis, j'ai développé des connaissances dans de nombreux domaines du développement web. Ainsi que durant mes études en technicien en informatique où j'ai acquis des connaissances dans la gestion de serveur Windows, Linux ainsi qu'en réseaux informatiques.</p>
+              <p>En réalisant des sites web pour moi-même ou pour des connaissances, j'ai développé des connaissances dans de nombreux domaines du développement web.
+                Ainsi que durant mes études en tant que technicien en informatique où j'ai aquis des connaissances dans la gestion de serveur Windows & Linux ainsi qu'en réseaux informatiques.</p>
               <div class='skills-cols'>
                 <div class='skills-col'>
                   <div class='time-item'>
