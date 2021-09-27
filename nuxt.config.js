@@ -52,6 +52,7 @@ export default {
     "~/components/sections/",
     "~/components/sections/me",
     "~/components/sections/portfolio",
+    "~/components/admin",
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -64,6 +65,9 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    ["nuxt-buefy", { css: false }],
+    "cookie-universal-nuxt",
+    "vue-sweetalert2/nuxt",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
