@@ -43,7 +43,7 @@
                 <div class='time-item-content'>
                   <h4 class='time-item-content-title'>Stage en tant que technicien informatique</h4>
                   <p class='time-item-content-time'><i class="far fa-clock"></i> 16/12/2019 - 20/12/2019</p>
-                  <p>Réalisation d'un stage en tant que technicien en informatique dans le cadre de mes études à l'hôpital d'Auvelais.</p>
+                  <p>Réalisation d'un stage en tant que technicien en informatique à l'hôpital d'Auvelais dans le cadre de mes études.</p>
                 </div>
               </div>
               <div class='time-item'>
@@ -114,8 +114,7 @@
               <h3 data-scroll data-scroll-speed='-1.5' data-scroll-direction='horizontal'>Compétences</h3>
             </div>
             <div class='skill-content'>
-              <p>En réalisant des sites web pour moi-même ou pour des connaissances, j'ai développé des connaissances dans de nombreux domaines du développement web.
-                Ainsi qu'aussi durant mes études en technicien en informatique où j'ai aquis des connaissances dans la gestion de serveur Windows & Linux ainsi qu'en réseaux informatiques.</p>
+              <p>En réalisant des sites web pour moi-même ou pour des amis, j'ai développé des connaissances dans de nombreux domaines du développement web. Ainsi que durant mes études en technicien en informatique où j'ai acquis des connaissances dans la gestion de serveur Windows, Linux ainsi qu'en réseaux informatiques.</p>
               <div class='skills-cols'>
                 <div class='skills-col'>
                   <div class='time-item'>

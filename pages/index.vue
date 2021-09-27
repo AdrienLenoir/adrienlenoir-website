@@ -33,14 +33,7 @@ export default {
     const lmS = new this.LocomotiveScroll({
       el: scrollEl,
       smooth: true,
-      multiplier: 1,
-      reloadOnContextChange: true,
-      mobile: {
-        smooth: true
-      },
-      tablet: {
-        smooth: true
-      }
+      multiplier: .8
     });
 
     lmS.on('scroll', () => {
@@ -49,21 +42,24 @@ export default {
 
     ScrollTrigger.scrollerProxy(scrollEl, {
       scrollTop(value) {
-        if (lmS) {
-          return arguments.length
-            ? lmS.scrollTo(value, 0, 0)
-            : lmS.scroll.instance.scroll.y;
-        }
-        return null;
+        return arguments.length
+          ? lmS.scrollTo(value, 0, 0)
+          : lmS.scroll.instance.scroll.y;
       },
       scrollLeft(value) {
-        if (lmS) {
-          return arguments.length
-            ? lmS.scrollTo(value, 0, 0)
-            : lmS.scroll.instance.scroll.x;
-        }
-        return null;
+        return arguments.length
+          ? lmS.scrollTo(value, 0, 0)
+          : lmS.scroll.instance.scroll.x;
       },
+      getBoundingClientRect() {
+        return {
+          left: 0,
+          top: 0,
+          width: window.innerWidth,
+          height: window.innerHeight
+        };
+      },
+      pinType: scrollEl.style.transform ? "transform" : "fixed"
     });
 
     ScrollTrigger.addEventListener('refresh', () => lmS.update())
@@ -72,7 +68,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style lang='scss' scoped>
-
-</style>

@@ -1,11 +1,12 @@
 <template>
-  <section id='portfolio' class='portfolio-section' data-scroll data-scroll-direction='horizontal'>
+  <section id='portfolio' class='portfolio-section'>
     <div ref='trigger' class='sections'>
       <div class='p-section one portfolio-main-section'>
         <div class='p-section-wrapper'>
           <div v-on-screenview-0-3 class='portfolio-main-section-text'>
             <h2>Mes réalisations</h2>
-            <p>Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. </p>
+            <p>Découvrez quelques projets sur lesquels j’ai travaillé récemment.</p>
+            <p class='more'>Vous désirez en voir plus ? <a href='mailto:lenoiradrien1@gmail.com'>Envoyez-moi un e-mail</a></p>
           </div>
           <div class='portfolio-main-section-images'>
             <div class='first-image-col'>
@@ -30,7 +31,7 @@
           <div class='portfolio-show-section-content'>
             <div v-on-screenview-0-3 class='portfolio-show-section-text'>
               <h2>{{ p.name }}</h2>
-              <ArrowLink arrowdirection='right' arrowposition='right'>Visiter</ArrowLink>
+              <ArrowLink :target='p.link' arrowdirection='right' arrowposition='right'>Visiter</ArrowLink>
               <p>{{ p.description }}</p>
             </div>
             <div class='portfolio-show-section-image'>
@@ -95,21 +96,15 @@ export default {
 
 .sections {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 100vh;
   overflow: hidden;
-  width: 400vw;
 }
 
 .p-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
   position: relative;
-  will-change: transform;
 
   &-wrapper {
     padding: 10vh 15vh;
@@ -127,21 +122,34 @@ export default {
 
   &-text {
     flex: .4;
-    max-width: 500px;
+    max-width: 450px;
     margin-right: 30px;
     transform: translateY(20%);
     transition: all 1.5s ease-in-out;
     opacity: 0;
 
     h2 {
+      font-size: 4vh;
       text-transform: uppercase;
       font-weight: 200;
       margin-bottom: 15px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 2.5vh;
       margin-bottom: 20px;
+    }
+
+    .more {
+      font-size: 2vh;
+      color: var(--c-white);
+
+      a {
+        display: block;
+        font-size: 15px;
+        color: var(--c-grey);
+        text-decoration: underline;
+      }
     }
 
     &.is-inview {
@@ -160,20 +168,20 @@ export default {
       flex: .5;
       display: flex;
       flex-flow: column;
-      height: 70vh;
+      height: 60vh;
 
       picture {
         flex: .5;
-        transform: translateY(20%);
+        transform: translateY(15%);
       }
     }
 
     picture {
       flex: .5;
-      height: 60vh;
+      height: 50vh;
       overflow: hidden;
       margin: 10px;
-      transform: translateY(-15%);
+      transform: translateY(-10%);
 
       img {
         height: 100%;
@@ -199,7 +207,7 @@ export default {
 
   .p-section-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0;
     border: 10vh solid var(--c-white);
@@ -228,13 +236,14 @@ export default {
     opacity: 0;
 
     h2 {
+      font-size: 4vh;
       text-transform: uppercase;
       font-weight: 200;
       margin-bottom: 5px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 2.5vh;
       margin-top: 10px;
       margin-bottom: 20px;
     }
@@ -268,7 +277,6 @@ export default {
         min-width: 100%;
         object-fit: cover;
         object-position: top;
-        //clip-path: inset(100% 0% 0% 0%);
         transform: scale(.8);
         filter: grayscale(100%);
         transition: all 1.4s cubic-bezier(0.77, 0, 0.175, 1);
@@ -276,7 +284,6 @@ export default {
         &.is-inview {
           filter: none;
           transform: scale(1);
-          //clip-path: inset(0% 0% 0% 0%);
         }
       }
     }

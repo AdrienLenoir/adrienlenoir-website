@@ -41,6 +41,7 @@ export default {
 .arrow-link {
   display: inline-block;
   text-transform: uppercase;
+  font-size: 2vh;
 
   &-wrapper {
     display: flex;

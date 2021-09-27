@@ -17,7 +17,7 @@
       </div>
 
       <div data-scroll-sticky class='goto-bottom'>
-      <a href='#me' data-scroll-to>
+      <a href='#me-wrapper' data-scroll-to>
         <Arrow direction='bottom' />
       </a>
     </div>
@@ -55,8 +55,8 @@ export default {
       justify-content: center;
       align-items: center;
       flex-flow: column;
-      font-size: 100px;
-      line-height: 110px;
+      font-size: 5vw;
+      line-height: 5vw;
       letter-spacing: 10px;
 
       span:nth-child(1) {
