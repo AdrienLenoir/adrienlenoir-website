@@ -1,6 +1,6 @@
 <template>
-  <footer class='footer' data-scroll data-scroll-speed="4">
-    <div class='ask-me' >
+  <footer class='footer'>
+    <div class='ask-me'>
       <p>Me contacter ?</p>
       <SocialIconWrapper>
         <SocialIcon icon='fab fa-linkedin-in' small target='https://www.linkedin.com/in/adrien-lenoir-webdev' />
@@ -28,7 +28,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  min-height: 100vh;
+  height: 100vh;
 
   .ask-me {
     display: flex;
@@ -38,13 +38,13 @@ export default {
 
     p {
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: 4vh;
     }
   }
 
   .copyright {
     margin-top: 50px;
-    font-size: 18px;
+    font-size: 2vh;
   }
 }
 </style>

@@ -46,6 +46,8 @@ body {
   font-size: 18px;
   font-family: 'Overpass', sans-serif;
   font-weight: 200;
+  overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 body::selection {

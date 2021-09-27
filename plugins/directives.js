@@ -3,10 +3,7 @@ import Vue from "vue"
 const observerCallback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.callback)
       entry.target.classList.add("is-inview")
-    } else {
-      entry.target.classList.remove("is-inview")
     }
   })
 }
