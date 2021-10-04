@@ -32,17 +32,32 @@ export default {
   border-radius: var(--v-border-radius);
   max-width: 600px;
 
+  @media screen and (max-width: 1244px) {
+    width: 100%;
+    max-width: initial;
+  }
+
   .me-avatar {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(-35%, -20%);
 
+    @media screen and (max-width: 1244px) {
+      transform: translate(-15%, -35%);
+    }
+
     img {
       width: 130px;
       height: 130px;
       border-radius: 50%;
       border: 8px solid var(--c-primary);
+
+      @media screen and (max-width: 670px) {
+        width: 110px;
+        height: 110px;
+        border: 5px solid var(--c-primary);
+      }
     }
   }
 
@@ -50,15 +65,27 @@ export default {
     margin-left: 60px;
     color: var(--c-white);
 
+    @media screen and (max-width: 670px) {
+      margin-left: 40px;
+    }
+
     h2 {
       font-size: 24px;
       text-align: center;
       margin-bottom: 15px;
+
+      @media screen and (max-width: 670px) {
+        margin-bottom: 25px;
+      }
     }
 
     p {
       font-size: 16px;
       margin-bottom: 15px;
+
+      @media screen and (max-width: 670px) {
+        font-size: 18px;
+      }
     }
 
     .words {

@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     async signin() {
-      const result = await this.$axios.$post(`/auth/signin`, {
+      const result = await this.$axios.$post(`/admin/auth/signin`, {
         password: this.password,
         a2f_code: this.a2f_code
       })

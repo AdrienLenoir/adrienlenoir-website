@@ -38,7 +38,7 @@
             <Navigation link='/admin' icon='fi-rr-home' name='Home' />
           </li>
           <li>
-            <Navigation link='/admin/creations' icon='fi-rr-gallery' name='Créations' />
+            <Navigation link='/admin/projects' icon='fi-rr-gallery' name='Projets' />
           </li>
         </ul>
       </div>
@@ -293,7 +293,7 @@ table {
         p {
           margin-left: 4px;
           flex-basis: 100%;
-          font-size: 14px;
+          font-size: 18px;
           text-transform: uppercase;
         }
       }

@@ -2,7 +2,7 @@
   <div id='js-scroll' data-scroll-container>
     <HeroSection />
     <MeSection />
-    <PortfolioSection />
+    <PortfolioSection :projects='projects' />
     <FooterSection />
   </div>
 </template>
@@ -15,16 +15,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   components: { FooterSection },
-  data() {
-    return {}
-  },
-  head() {
+  async asyncData({ $axios }) {
+    const resProjects = await $axios.$get('/projects/last')
+
     return {
-      title: '',
-      meta: [
-        { hid: 'og:description', name: 'og:description', content: '' },
-        { hid: 'description', name: 'description', content: '' }
-      ]
+      projects: resProjects.projects ? resProjects.projects : [],
+    }
+  },
+  data() {
+    return {
+      projects: []
     }
   },
   mounted() {
@@ -33,7 +33,10 @@ export default {
     const lmS = new this.LocomotiveScroll({
       el: scrollEl,
       smooth: true,
-      multiplier: .8
+      multiplier: .8,
+      tablet: {
+        breakpoint: 1244
+      }
     });
 
     lmS.on('scroll', () => {

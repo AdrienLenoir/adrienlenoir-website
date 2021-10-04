@@ -3,6 +3,10 @@ export default {
     port: 7600,
   },
 
+  serverMiddleware: {
+    "/api": "~/api",
+  },
+
   loading: {
     color: "white",
     height: "4px",
@@ -10,17 +14,34 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "adrienlenoir",
+    title: "Adrien Lenoir - Développeur web",
     htmlAttrs: {
-      lang: "en",
+      lang: "fr",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: "Adrien Lenoir - Développeur web",
+      },
+      {
+        hid: "og:site_name",
+        name: "og:site_name",
+        content: "Adrien Lenoir - Développeur web",
+      },
+      {
+        hid: "apple-mobile-web-app-title",
+        name: "apple-mobile-web-app-title",
+        content: "Adrien Lenoir - Développeur web",
+      },
+      { name: "msapplication-TileColor", content: "#F9FCFF" },
+      { name: "theme-color", content: "#F9FCFF" },
+      { name: "robots", content: "all, index, follow" },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/png", href: "/icon.png" },
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.14.0/css/all.css",
@@ -52,7 +73,7 @@ export default {
     "~/components/sections/",
     "~/components/sections/me",
     "~/components/sections/portfolio",
-    "~/components/admin",
+    "~/components/admin/layout",
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -71,7 +92,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: "http://127.0.0.1:7600/api",
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

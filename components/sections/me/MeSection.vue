@@ -17,7 +17,7 @@
               <h3 data-scroll data-scroll-speed='-1.5' data-scroll-direction='horizontal'>Présentation</h3>
             </div>
             <div class='presentation-content'>
-              <p>Hello! Je m'appel Adrien, j'ai actuellement {{ getAge() }} ans, je réside en Belgique et je suis passionné par l'informatique en général.</p>
+              <p>Hello! Je m'appelle Adrien, j'ai actuellement {{ getAge() }} ans, je réside en Belgique et je suis passionné par l'informatique en général.</p>
               <br>
               <p>Fort de plus de 7 ans d'expérience dans le développement informatique,</p>
               <p>
@@ -72,7 +72,7 @@
                 <div class='time-item-content'>
                   <h4 class='time-item-content-title'>Becode</h4>
                   <p class='time-item-content-time'><i class="far fa-clock"></i> 25/05/2021 - Maintenant</p>
-                  <p>Formatation de type développement web à Becode.</p>
+                  <p>Formation au développement web à Becode.</p>
                 </div>
               </div>
               <div class='time-item'>
@@ -91,8 +91,8 @@
                 </div>
                 <div class='time-item-content'>
                   <h4 class='time-item-content-title'>Tremplin OLL</h4>
-                  <p class='time-item-content-time'><i class="far fa-clock"></i> 24/08/2020 - 11/09/2021</p>
-                  <p>Formation de type tremplin à Technofutur TIC.</p>
+                  <p class='time-item-content-time'><i class="far fa-clock"></i> 24/08/2020 - 11/09/2020</p>
+                  <p>Formation-tremplin à Technofutur TIC.</p>
                 </div>
               </div>
               <div class='time-item'>
@@ -114,8 +114,8 @@
               <h3 data-scroll data-scroll-speed='-1.5' data-scroll-direction='horizontal'>Compétences</h3>
             </div>
             <div class='skill-content'>
-              <p>En réalisant des sites web pour moi-même ou pour des connaissances, j'ai développé des connaissances dans de nombreux domaines du développement web.
-                Ainsi que durant mes études en tant que technicien en informatique où j'ai aquis des connaissances dans la gestion de serveur Windows & Linux ainsi qu'en réseaux informatiques.</p>
+              <p>En réalisant des sites web pour moi-même ou pour des proches, j'ai aquis des connaissances dans de nombreux domaines du développement web.
+                Ainsi que durant mes études en tant que technicien en informatique où j'ai aquis des connaissances dans la gestion de serveur Windows & Linux et en réseaux informatiques.</p>
               <div class='skills-cols'>
                 <div class='skills-col'>
                   <div class='time-item'>
@@ -214,8 +214,6 @@ export default {
   padding: 60px 0 120px 0;
 
   &-wrapper {
-    position: sticky;
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -250,7 +248,7 @@ export default {
         margin-left: 30px;
         flex: .6;
         text-transform: uppercase;
-        font-size: 28px;
+        font-size: 3vh;
         padding: 2vw 0;
       }
     }
@@ -279,6 +277,7 @@ export default {
     &-content {
 
       &-title {
+        font-size: 2.5vh;
         text-transform: uppercase;
         margin-bottom: 3px;
       }
@@ -311,6 +310,97 @@ export default {
     }
   }
 
+}
+
+@media screen and (max-width: 1244px) {
+  .me-section {
+    &-wrapper {
+      flex-flow: column;
+    }
+
+    &-sidebar {
+      width: 100%;
+      flex: 1;
+      height: auto;
+      margin-bottom: 40px;
+
+      &-navigation {
+        display: none;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      flex: 1;
+      margin-left: 0;
+
+      &-item {
+        padding: 5vh 0;
+
+        &-title {
+          flex: 1;
+          font-size: 2.7vh;
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-height: 650px) {
+  .me-section {
+    &-sidebar {
+      &-navigation {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 848px) {
+  .me-section {
+
+    .skills-cols {
+      flex-flow: column;
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .me-section {
+    .time-item {
+      &-icon {
+        margin-right: 20px;
+        width: 60px;
+
+        i {
+          color: var(--c-grey-dark);
+          font-size: 45px;
+        }
+      }
+
+      &-content {
+
+        &-title {
+          text-transform: uppercase;
+          margin-bottom: 3px;
+        }
+
+        &-time {
+          margin-bottom: 10px;
+          color: var(--c-grey-dark);
+
+          i {
+            color: var(--c-primary);
+          }
+        }
+      }
+    }
+  }
 }
 
 

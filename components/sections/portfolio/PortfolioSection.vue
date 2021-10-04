@@ -10,33 +10,32 @@
           </div>
           <div class='portfolio-main-section-images'>
             <div class='first-image-col'>
-              <picture>
-                <img v-on-screenview src='/dervoo.png' alt='Maquette dervoo.com' style='transition-delay: .3s'>
+              <picture v-if='projects.length >= 1'>
+                <img v-on-screenview :src='`/api/upload/${projects[0].image}`' alt='Maquette dervoo.com' style='transition-delay: .3s'>
               </picture>
-              <picture>
-                <img v-on-screenview src='/dervoo.png' alt='Maquette dervoo.com'  style='transition-delay: .6s'>
+              <picture v-if='projects.length >= 2'>
+                <img v-on-screenview :src='`/api/upload/${projects[1].image}`' alt='Maquette dervoo.com'  style='transition-delay: .6s'>
               </picture>
             </div>
-            <picture>
-              <img v-on-screenview src='/dervoo.png' alt='Maquette dervoo.com' style='transition-delay: .8s'>
+            <picture v-if='projects.length >= 3'>
+              <img v-on-screenview :src='`/api/upload/${projects[2].image}`' alt='Maquette dervoo.com' style='transition-delay: .8s'>
             </picture>
           </div>
         </div>
       </div>
-      <div v-for="(p, i) in portfolio"
-           :key='p.id'
-           class='p-section portfolio-show-section'
-           :class="i % 2 !== 0 ? 'portfolio-show-section-invers' : ''">
+      <div v-for="project in projects"
+           :key='project.id'
+           class='p-section portfolio-show-section'>
         <div class='p-section-wrapper'>
           <div class='portfolio-show-section-content'>
             <div v-on-screenview-0-3 class='portfolio-show-section-text'>
-              <h2>{{ p.name }}</h2>
-              <ArrowLink :target='p.link' arrowdirection='right' arrowposition='right'>Visiter</ArrowLink>
-              <p>{{ p.description }}</p>
+              <h2>{{ project.name }}</h2>
+              <ArrowLink :target='project.link' arrowdirection='right' arrowposition='right'>Visiter</ArrowLink>
+              <p v-html='project.description.replace("\n","<br/>")'></p>
             </div>
             <div class='portfolio-show-section-image'>
               <picture>
-                <img v-on-screenview-0-3 :src='p.image' :alt='`${p.name} maquette image`'>
+                <img v-on-screenview-0-3 :src='`/api/upload/${project.image}`' :alt='`${project.name} preview image`'>
               </picture>
             </div>
           </div>
@@ -50,41 +49,39 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-const portfolio = [
-  { id: 0, name: "Dervoo.com", link: "https://dervoo.com/", image: "/dervoo.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
-  { id: 1, name: "Business.dervoo.com", link: "https://businessdervoo.com/", image: "/dervoo-business.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
-  { id: 2, name: "Dervoo.com", link: "https://dervoo.com/", image: "/dervoo.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
-  { id: 3, name: "Business.dervoo.com", link: "https://businessdervoo.com/", image: "/dervoo-business.png", description: "Ut faucibus justo quis nisl. Etiam vulputate, sapien eu egestas rutrum, leo neque luctus dolor, sed hendrerit tortor metus ut dui. Etiam id pede " },
-
-]
-
 export default {
   name: 'PortfolioSection',
-  data() {
-    return {
-      portfolio
+  props: {
+    projects: {
+      type: Array,
+      required: true
     }
   },
   mounted() {
+    const trigger = this.$refs.trigger
     setTimeout(() => {
-      const sections = gsap.utils.toArray(".p-section");
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          start: "top top",
-          trigger: this.$refs.trigger,
-          scroller: "#js-scroll",
-          pin: true,
-          scrub: 0.5,
-          snap: 1 / (sections.length - 1),
-          end: () => `+=${this.$refs.trigger.offsetWidth}`
-        },
-      });
+      ScrollTrigger.matchMedia({
+        "(min-width: 1244px)"() {
+          const sections = gsap.utils.toArray(".p-section");
+          gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+              start: "top top",
+              trigger,
+              scroller: "#js-scroll",
+              pin: true,
+              scrub: 0.5,
+              snap: 1 / (sections.length - 1),
+              end: () => `+=${trigger.offsetWidth}`
+            },
+          });
+        }
+      })
       ScrollTrigger.refresh();
     });
 
-  }
+  },
 }
 </script>
 
@@ -98,6 +95,10 @@ export default {
   display: flex;
   align-items: center;
   overflow: hidden;
+
+  @media screen and (max-width: 1244px) {
+    flex-flow: column;
+  }
 }
 
 .p-section {
@@ -110,6 +111,11 @@ export default {
     padding: 10vh 15vh;
     height: 100vh;
     width: 100vw;
+
+    @media screen and (max-width: 900px) {
+      height: auto;
+      padding: 10vh 5vh;
+    }
   }
 }
 
@@ -118,6 +124,10 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 900px) {
+      flex-flow: column;
+    }
   }
 
   &-text {
@@ -128,21 +138,40 @@ export default {
     transition: all 1.5s ease-in-out;
     opacity: 0;
 
+    @media screen and (max-width: 900px) {
+      flex: 1;
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+    }
+
     h2 {
       font-size: 4vh;
       text-transform: uppercase;
       font-weight: 200;
       margin-bottom: 15px;
+
+      @media screen and (max-width: 1244px) {
+        font-size: 2.5vh;
+      }
     }
 
     p {
       font-size: 2.5vh;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 1244px) {
+        font-size: 2vh;
+      }
     }
 
     .more {
       font-size: 2vh;
       color: var(--c-white);
+
+      @media screen and (max-width: 1244px) {
+        font-size: 1.8vh;
+      }
 
       a {
         display: block;
@@ -163,6 +192,15 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 900px) {
+      flex: 1;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
 
     .first-image-col {
       flex: .5;
@@ -211,13 +249,13 @@ export default {
     align-items: center;
     padding: 0;
     border: 10vh solid var(--c-white);
-  }
 
-  &-inverse {
-    .portfolio-show-section-text {
-      order: 2;
-      margin-right: 0;
-      margin-left: 30px;
+    @media screen and (max-width: 900px) {
+      border: 5vh solid var(--c-white);
+    }
+
+    @media screen and (max-width: 600px) {
+      border: 20px solid var(--c-white);
     }
   }
 
@@ -226,26 +264,54 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 900px) {
+      flex-flow: column;
+      justify-content: center;
+      padding: 10vh 5vh;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 40px 25px;
+    }
   }
 
   &-text {
-    flex: .4;
+    flex-basis: 40%;
     margin-right: 30px;
     transform: translateX(-10%);
     transition: all 1.5s ease-in-out;
     opacity: 0;
+
+    @media screen and (max-width: 1244px) {
+      flex: .6;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex: 1;
+      width: 100%;
+      margin-right: 0;
+    }
 
     h2 {
       font-size: 4vh;
       text-transform: uppercase;
       font-weight: 200;
       margin-bottom: 5px;
+
+      @media screen and (max-width: 1244px) {
+        font-size: 2.5vh;
+      }
     }
 
     p {
       font-size: 2.5vh;
       margin-top: 10px;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 1244px) {
+        font-size: 2vh;
+      }
     }
 
     &.is-inview {
@@ -264,11 +330,33 @@ export default {
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 1244px) {
+      height: 50vh;
+      width: 40vw;
+      right: 3%;
+    }
+
+    @media screen and (max-width: 900px) {
+      position: initial;
+      width: 100%;
+      flex: 1;
+    }
+
     picture {
       width: 100%;
       height: 70vh;
       overflow: hidden;
       margin: 10px;
+
+      @media screen and (max-width: 1244px) {
+        height: 50vh;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 900px) {
+        margin: 0;
+        margin-top: 10px;
+      }
 
       img {
         height: 100%;
