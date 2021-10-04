@@ -3,6 +3,8 @@
 
 /* RESET CSS
  * --------------------------------------- */
+
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
   padding: 0;
@@ -38,17 +40,19 @@ i {
  * --------------------------------------- */
 
 body {
-  overflow-x: hidden !important;
+  overflow: scroll !important;
   background-color: var(--c-primary);
   color: var(--c-white);
   font-size: 18px;
   font-family: 'Overpass', sans-serif;
   font-weight: 200;
+  overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
-body ::selection {
+body::selection {
   background: var(--c-grey);
-  color: var(--c-white);
+  color: var(--c-primary);
 }
 
 a {
@@ -63,7 +67,6 @@ p {
 ::-webkit-scrollbar
 {
   width: 5px;
-  height: 7px;
 }
 ::-webkit-scrollbar-track
 {
@@ -72,7 +75,6 @@ p {
 ::-webkit-scrollbar-thumb
 {
   background: var(--c-secondary);
-  height:10px;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-track-piece {

@@ -1,0 +1,96 @@
+// Import Bulma's core
+$weight-light: normal !default
+$weight-normal: normal !default
+$weight-medium: normal !default
+$weight-semibold: normal !default
+$weight-bold: normal !default
+$family-sans-serif: "Hammersmith One", sans-serif;
+
+$grey-darker: #FCFCFE;
+
+$black:        #FCFCFE;
+$black-bis:    lighten(#FCFCFE, 5%);
+$black-ter:    lighten(#FCFCFE, 15%);
+
+$grey-darker:  #FCFCFE;
+$grey-dark:    lighten(#FCFCFE, 5%);
+$grey:         lighten(#FCFCFE, 15%);
+
+$table-head-background-color: #202021 !default;
+$table-body-background-color: lighten($table-head-background-color, 3%) !default;
+$table-foot-background-color: transparent !default;
+
+$table-cell-border: 0 0 0;
+$table-head-cell-border-width: 0 0 0;
+$table-foot-cell-border-width: 0 0 0;
+$table-background-color: #19191A;
+$table-head-background-color: #19191A;
+$modal-background-background-color: rgba(25, 25, 26, .5);
+$modal-card-body-background-color: #19191A;
+$modal-card-head-background-color: #19191A;
+
+
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #7C6ADE;
+$primary-invert: findColorInvert($primary);
+
+// Setup $colors to use as bulma classes
+$colors: (
+  "white": (#FCFCFE, #3C5275),
+  "black": (#3C5275, #FCFCFE),
+  "light": ($light, $light-invert),
+  "dark": (#3C5275, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert)
+);
+
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$input-background-color: #202021;
+$input-color: #F9F7FF;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/utils/_all";
+@import "~buefy/src/scss/components/_autocomplete";
+@import "~buefy/src/scss/components/_carousel";
+@import "~buefy/src/scss/components/_checkbox";
+@import "~buefy/src/scss/components/_clockpicker";
+@import "~buefy/src/scss/components/_collapse";
+@import "~buefy/src/scss/components/_datepicker";
+@import "~buefy/src/scss/components/_dialog";
+@import "~buefy/src/scss/components/_dropdown";
+@import "~buefy/src/scss/components/_form";
+@import "~buefy/src/scss/components/_icon";
+@import "~buefy/src/scss/components/_image";
+@import "~buefy/src/scss/components/_loading";
+@import "~buefy/src/scss/components/_menu";
+@import "~buefy/src/scss/components/_message";
+@import "~buefy/src/scss/components/_modal";
+@import "~buefy/src/scss/components/_navbar";
+@import "~buefy/src/scss/components/_notices";
+@import "~buefy/src/scss/components/_numberinput";
+@import "~buefy/src/scss/components/_pagination";
+@import "~buefy/src/scss/components/_progress";
+@import "~buefy/src/scss/components/_radio";
+@import "~buefy/src/scss/components/_rate";
+@import "~buefy/src/scss/components/_select";
+@import "~buefy/src/scss/components/_skeleton";
+@import "~buefy/src/scss/components/_sidebar";
+@import "~buefy/src/scss/components/_slider";
+@import "~buefy/src/scss/components/_steps";
+@import "~buefy/src/scss/components/_switch";
+@import "~buefy/src/scss/components/_table";
+@import "~buefy/src/scss/components/_tabs";
+@import "~buefy/src/scss/components/_tag";
+@import "~buefy/src/scss/components/_taginput";
+@import "~buefy/src/scss/components/_timepicker";
+@import "~buefy/src/scss/components/_tooltip";
+@import "~buefy/src/scss/components/_upload";
