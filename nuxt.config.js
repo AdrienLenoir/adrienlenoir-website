@@ -19,6 +19,18 @@ export default {
       lang: "fr",
     },
     meta: [
+      {
+        hid: "og:description",
+        name: "og:description",
+        content:
+          "Découvrez-moi en parcourant mon site personnel. Présentation, compétence, réalisation,...",
+      },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Découvrez-moi en parcourant mon site personnel. Présentation, compétence, réalisation,...",
+      },
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {

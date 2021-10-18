@@ -11,14 +11,14 @@
           <div class='portfolio-main-section-images'>
             <div class='first-image-col'>
               <picture v-if='projects.length >= 1'>
-                <img v-on-screenview :src='`/api/upload/${projects[0].image}`' alt='Maquette dervoo.com' style='transition-delay: .3s'>
+                <img v-on-screenview :src='`/api/upload/${projects[0].image}`' :alt='`Maquette ${projects[0].name}`' style='transition-delay: .3s'>
               </picture>
               <picture v-if='projects.length >= 2'>
-                <img v-on-screenview :src='`/api/upload/${projects[1].image}`' alt='Maquette dervoo.com'  style='transition-delay: .6s'>
+                <img v-on-screenview :src='`/api/upload/${projects[1].image}`' :alt='`Maquette ${projects[1].name}`'  style='transition-delay: .6s'>
               </picture>
             </div>
             <picture v-if='projects.length >= 3'>
-              <img v-on-screenview :src='`/api/upload/${projects[2].image}`' alt='Maquette dervoo.com' style='transition-delay: .8s'>
+              <img v-on-screenview :src='`/api/upload/${projects[2].image}`' :alt='`Maquette ${projects[2].name}`' style='transition-delay: .8s'>
             </picture>
           </div>
         </div>
@@ -35,7 +35,7 @@
             </div>
             <div class='portfolio-show-section-image'>
               <picture>
-                <img v-on-screenview-0-3 :src='`/api/upload/${project.image}`' :alt='`${project.name} preview image`'>
+                <img v-on-screenview-0-3 loading="lazy" :src='`/api/upload/${project.image}`' :alt='`${project.name} preview image`'>
               </picture>
             </div>
           </div>

@@ -27,6 +27,15 @@ export default {
       projects: []
     }
   },
+  head() {
+    return {
+      title: 'Adrien Lenoir - Développeur web',
+      meta: [
+        { hid: 'og:description', name: 'og:description', content: 'Découvrez-moi en parcourant mon site personnel. Présentation, compétence, réalisation,...' },
+        { hid: 'description', name: 'description', content: 'Découvrez-moi en parcourant mon site personnel. Présentation, compétence, réalisation,...' }
+      ]
+    }
+  },
   mounted() {
     const scrollEl = document.querySelector("#js-scroll");
 
