@@ -1,7 +1,7 @@
 # adrienlenoir.be
 
 ## Description
-Réalisation de mon site personnel avec un "mini cv" ainsi que mes dernières réalisations.
+Réalisation de mon site personnel avec un "petit cv" ainsi que mes dernières réalisations.
 
 ## Voir le projet
 
