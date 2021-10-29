@@ -65,6 +65,8 @@ export default {
   css: [
     "~/assets/style/style.scss",
     "locomotive-scroll/dist/locomotive-scroll.css",
+    "~/assets/uicons/css/uicons-regular-rounded.css",
+    "~/assets/uicons/css/uicons-bold-rounded.css",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
