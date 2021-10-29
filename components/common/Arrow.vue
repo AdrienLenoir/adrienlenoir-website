@@ -1,7 +1,7 @@
 <template>
-  <div :class="arrowClass.join(' ')">
+  <span :class="arrowClass.join(' ')">
     <i class="fas fa-arrow-down"></i>
-  </div>
+  </span>
 </template>
 
 <script>

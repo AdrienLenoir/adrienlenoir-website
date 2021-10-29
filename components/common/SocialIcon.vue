@@ -1,5 +1,5 @@
 <template>
-  <a :href="target" rel="noreferrer" :target="target && target.includes('https') ? '_blank' : ''" class="social-icon" :class="small ? 'social-icon-small' : ''">
+  <a :href="target" rel="noreferrer" :target="target && target.includes('https') ? '_blank' : '_self'" class="social-icon" :class="small ? 'social-icon-small' : ''">
     <i :class="icon" />
   </a>
 </template>
