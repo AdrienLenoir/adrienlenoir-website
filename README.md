@@ -16,3 +16,16 @@ Vous pouvez visualiser la page web via cette url [adrienlenoir.be](https://adrie
 
 ## Auteurs
 * **Adrien Lenoir** _alias_ [@AdrienLenoir](https://github.com/AdrienLenoir)
+
+## Installation
+* Créer une base de données avec le nom que vous voulez
+* Renommer le exemple.env dans le dossier /api par .env
+* (.env) Modifier la clé 'JWT_SIGN_SECRET' par une chaîne de caractères unique
+* (.env) Modifier les clés pour la connexion à la base de donnée 
+* Exécutez la commande ```npm i``` à la racine du projet
+* Exécutez la commande ```npm run dev``` à la racine du projet
+
+## Espace Admin
+* Rendez-vous sur l'url /admin
+* Rentrez le mot de passe ```admin```
+* Utilisez la clé 'OTP_SECRET_KEY' du .env pour générer votre code otp
